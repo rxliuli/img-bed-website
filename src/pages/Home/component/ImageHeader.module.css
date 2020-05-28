@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  margin: 0 8px;
+}
+
+.link {
+  font-size: 20px;
+  color: #2387a9;
+  text-decoration-line: none;
+}

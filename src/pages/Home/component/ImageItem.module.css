@@ -1,0 +1,20 @@
+/*图片元素*/
+.imgItem {
+  position: relative;
+  background-color: #c8c8c8;
+  color: #202020;
+  grid-row-start: auto;
+}
+
+.img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/*底部信息栏*/
+.footer {
+  height: 48px;
+  line-height: 48px;
+}

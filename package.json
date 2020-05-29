@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html --out-dir ../dist/",
+    "build": "parcel build src/index.html --public-url . --out-dir ../dist/"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",

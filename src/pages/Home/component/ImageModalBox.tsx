@@ -1,8 +1,8 @@
 import * as React from 'react'
+import { MouseEvent, useEffect, useState } from 'react'
 import css from './ImageModalBox.module.css'
 import classNames from 'classnames'
-import { useEffect, useState } from 'react'
-import iconClose from '../assets/close.png'
+import iconClose from '../assets/close.svg'
 
 type PropsType = {
   visible: boolean
@@ -42,11 +42,18 @@ const ImageModalBox: React.FC<PropsType> = props => {
     setVisible(props.visible)
   }, [props.visible])
 
+  function handleClick(e: MouseEvent<HTMLDivElement>) {
+    if (e.target === e.currentTarget) {
+      props.onCancel()
+    }
+  }
+
   return (
     <div
       className={classNames(css.imageModalBox, {
         [css.hide]: !visible,
       })}
+      onClick={handleClick}
     >
       {visible && props.children}
       <img

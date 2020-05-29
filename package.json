@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel src/index.html --out-dir ../dist/",
-    "build": "parcel build src/index.html --public-url . --out-dir ../dist/"
+    "build": "rimraf ../dist/ && parcel build src/index.html --public-url . --out-dir ../dist/"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
@@ -13,6 +13,7 @@
     "@types/react-dom": "^16.9.8",
     "autoprefixer": "^9.8.0",
     "postcss-modules": "^2.0.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.3"
   },
   "dependencies": {
